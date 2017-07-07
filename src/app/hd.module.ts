@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HDComponent } from './hd.component';
 import { LoginComponent } from './login/login.component';
@@ -39,7 +40,8 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    routes
+    routes,
+    BrowserAnimationsModule
   ],
   providers: [AuthService],
   bootstrap: [HDComponent]
