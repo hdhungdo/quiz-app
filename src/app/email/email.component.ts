@@ -30,11 +30,9 @@ export class EmailComponent implements OnInit {
     if(formData.valid) {
       console.log(formData.value);
       this.af.auth.signInWithEmailAndPassword(formData.value.email, formData.value.password).then((success) => {
-          console.log(success);
           this.router.navigate(['/members']);
         }).catch(
         (err) => {
-          console.log(err);
           this.error = err;
         })
     }

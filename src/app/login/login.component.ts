@@ -28,20 +28,16 @@ export class LoginComponent implements OnInit {
 
   loginFacebook = function () {
     this.af.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider()).then((success) => {
-      console.log(success);
       this.router.navigate(['/members']);
     }).catch((err) => {
-      console.log(err);
       this.error = err;
     })
   }
 
   loginGoogle = function () {
     this.af.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then((success) => {
-      console.log(success);
       this.router.navigate(['/members']);
     }).catch((err) => {
-      console.log(err);
       this.error = err;
     })
   }
